@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Silent Wisdom  </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    📚 Silent Wisdom  
+                </a>
+                <button class="mobile-nav-toggle" onclick="toggleMobileNav()">☰</button>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search books, authors, ISBN...">
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        🛒
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+        <div class="search-box">
+            <input type="text" id="mobileSearchInput" placeholder="Search books, authors, ISBN...">
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html" class="mobile-nav-link active">🏠 Home</a>
+            <a href="catalog.html" class="mobile-nav-link">📚 Catalog</a>
+            <a href="new-releases.html" class="mobile-nav-link">✨ New Releases</a>
+            <a href="best-sellers.html" class="mobile-nav-link">🔥 Best Sellers</a>
+            <div class="mobile-nav-divider"></div>
+            <a href="gift-cards.html" class="mobile-nav-link">🎁 Gift Cards</a>
+            <a href="book-clubs.html" class="mobile-nav-link">📖 Book Clubs</a>
+            <div class="mobile-nav-divider"></div>
+            <a href="contact.html" class="mobile-nav-link">📞 Contact</a>
+            <a href="faq.html" class="mobile-nav-link">❓ FAQ</a>
+        </div>
+    </div>
+
+<!-- Main Content -->
+    <main class="container" id="mainContent">
+        <!-- Section 1: Hero Banner -->
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to Silent Wisdom</h1>
+                <p>Discover your next favorite book from our curated collection of bestsellers, new releases, and timeless classics.</p>
+<a href="catalog.html" class="hero-cta-btn">Browse Collection</a>
+            </div>
+        </div>
+
+        <!-- Section 2: Featured Categories -->
+        <div class="home-section">
+            <div class="section-header">
+                <h2>Shop by Category</h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterCategoryAndShow('Fiction')">
+                    <div class="category-icon">📖</div>
+                    <h3>Fiction</h3>
+                </div>
+                <div class="category-card" onclick="filterCategoryAndShow('Fantasy')">
+                    <div class="category-icon">🐉</div>
+                    <h3>Fantasy</h3>
+                </div>
+                <div class="category-card" onclick="filterCategoryAndShow('Mystery')">
+                    <div class="category-icon">🔍</div>
+                    <h3>Mystery</h3>
+                </div>
+                <div class="category-card" onclick="filterCategoryAndShow('Science Fiction')">
+                    <div class="category-icon">🚀</div>
+                    <h3>Sci-Fi</h3>
+                </div>
+                <div class="category-card" onclick="filterCategoryAndShow('Classic')">
+                    <div class="category-icon">📚</div>
+                    <h3>Classics</h3>
+                </div>
+                <div class="category-card" onclick="filterCategoryAndShow('Self-Help')">
+                    <div class="category-icon">💡</div>
+                    <h3>Self-Help</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: New Releases -->
+        <div class="home-section">
+            <div class="section-header">
+                <h2>New Releases</h2>
+                <button class="view-all-btn" onclick="window.location.href='new-releases.html'">View All →</button>
+            </div>
+            <div class="book-grid" id="newReleasesGrid">
+                <!-- New releases will be loaded via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Section 4: Section Breaker 1 -->
+        <div class="section-breaker">
+            <div class="breaker-content">
+                <div class="breaker-icon">📦</div>
+                <h3>Free Shipping</h3>
+                <p>On orders over $50</p>
+            </div>
+            <div class="breaker-divider"></div>
+            <div class="breaker-content">
+                <div class="breaker-icon">⭐</div>
+                <h3>Best Prices</h3>
+                <p>Price match guarantee</p>
+            </div>
+            <div class="breaker-divider"></div>
+            <div class="breaker-content">
+                <div class="breaker-icon">🔒</div>
+                <h3>Secure Checkout</h3>
+                <p>100% secure payment</p>
+            </div>
+        </div>
+
+        <!-- Section 5: Best Sellers -->
+        <div class="home-section">
+            <div class="section-header">
+                <h2>Best Sellers</h2>
+                <button class="view-all-btn" onclick="window.location.href='best-sellers.html'">View All →</button>
+            </div>
+            <div class="book-grid" id="bestSellersGrid">
+                <!-- Best sellers will be loaded via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Section 6: Section Breaker 2 -->
+        <div class="section-breaker-2">
+            <div class="breaker-2-content">
+                <h2>"A reader lives a thousand lives before he dies. The man who never reads lives only one."</h2>
+                <p>— George R.R. Martin</p>
+            </div>
+        </div>
+
+        <!-- Section 7: Why Choose Us -->
+        <div class="home-section why-choose-section">
+            <div class="section-header">
+                <h2>Why Choose Silent Wisdom</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Fast Shipping</h3>
+                    <p>Free shipping on orders over $50. Same-day dispatch on all orders.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>Quality Packaging</h3>
+                    <p>Every book is carefully packed to ensure it arrives in perfect condition.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Best Prices</h3>
+                    <p>Competitive pricing with price match guarantee on all books.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Gift Wrapping</h3>
+                    <p>Add gift wrapping at checkout for that special touch.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📞</div>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer support team is always here to help you.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day return policy for all items in original condition.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 8: Newsletter Signup -->
+        <div class="home-section newsletter-section">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for exclusive deals, new releases, and reading recommendations.</p>
+                <form class="newsletter-form" onsubmit="subscribeHomeNewsletter(event)">
+                    <input type="email" id="homeNewsletterEmail" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically loaded here -->
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <!-- Cart total and checkout button will be here -->
+        </div>
+    </div>
+
+    <!-- Book Detail Modal -->
+    <div class="book-detail-overlay" id="bookDetailOverlay" onclick="closeBookDetail()"></div>
+    <div class="book-detail-modal" id="bookDetailModal">
+        <button class="close-book-detail" onclick="closeBookDetail()">×</button>
+        <div class="book-detail-content" id="bookDetailContent">
+            <!-- Book details will be loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Silent Wisdom  </h3>
+                    <p style="font-size: 0.875rem; color: #6b7280;">Your trusted online bookstore for all genres. Fast shipping and excellent customer service.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="new-releases.html">New Releases</a></li>
+                        <li><a href="best-sellers.html">Best Sellers</a></li>
+                        <li><a href="gift-cards.html">Gift Cards</a></li>
+                        <li><a href="book-clubs.html">Book Clubs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                        <li><a href="facebook.html">Facebook</a></li>
+                        <li><a href="twitter.html">Twitter</a></li>
+                        <li><a href="instagram.html">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Silent Wisdom  . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

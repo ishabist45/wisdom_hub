@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Silent Wisdom</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span>📚</span> Silent Wisdom
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search books by title, author, or ISBN...">
+                </div>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="info-wrapper">
+            <a href="index.html" class="back-btn">← Back to Home</a>
+            
+            <div class="info-container">
+                <h1>Frequently Asked Questions</h1>
+                <p style="color: #6b7280; margin-bottom: 2rem;">Find answers to common questions about shopping with us.</p>
+                
+                <div class="info-section">
+                    <h2>Ordering</h2>
+                    <div class="faq-item">
+                        <h3>How do I place an order?</h3>
+                        <p>Simply browse our collection, add books to your cart, and proceed to checkout.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I modify or cancel my order?</h3>
+                        <p>You can modify or cancel your order within 1 hour of placing it. Contact us with your order number.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you offer gift wrapping?</h3>
+                        <p>Yes! At checkout, you can add gift wrapping for $2.99 per item.</p>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h2>Payment</h2>
+                    <div class="faq-item">
+                        <h3>What payment methods do you accept?</h3>
+                        <p>We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and gift cards.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Is my payment information secure?</h3>
+                        <p>Yes, all payments are processed securely. We never store your full credit card information.</p>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h2>Shipping</h2>
+                    <div class="faq-item">
+                        <h3>How long does shipping take?</h3>
+                        <p>Standard shipping takes 5-7 business days. Express and Priority options are available at checkout.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you ship internationally?</h3>
+                        <p>Yes, we ship to select international locations. Shipping costs and delivery times vary by country.</p>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h2>Returns</h2>
+                    <div class="faq-item">
+                        <h3>What is your return policy?</h3>
+                        <p>We accept returns within 30 days of delivery for items in original condition.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I return a book?</h3>
+                        <p>Contact us to request a return label, pack the item securely, and ship it back.</p>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h2>Still Have Questions?</h2>
+                    <p>Contact us at support@silentwisdom.com or call +1 (555) 123-4567.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Silent Wisdom  </h3>
+                    <p style="font-size: 0.875rem; color: #6b7280;">Your trusted online bookstore for all genres. Fast shipping and excellent customer service.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="index.html">All Books</a></li>
+                        <li><a href="new-releases.html">New Releases</a></li>
+                        <li><a href="best-sellers.html">Best Sellers</a></li>
+                        <li><a href="gift-cards.html">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="book-clubs.html">Book Clubs</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                        <li><a href="facebook.html">Facebook</a></li>
+                        <li><a href="twitter.html">Twitter</a></li>
+                        <li><a href="instagram.html">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Silent Wisdom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🛒</div>
+                <p style="margin-bottom: 0.5rem;">Your cart is empty</p>
+                <p style="font-size: 0.875rem;">Add some books to get started!</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

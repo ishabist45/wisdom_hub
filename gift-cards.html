@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards - Silent Wisdom</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span>📚</span> Silent Wisdom
+                </a>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search books by title, author, or ISBN...">
+                </div>
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="info-wrapper">
+            <a href="index.html" class="back-btn">← Back to Home</a>
+            
+            <div class="info-container">
+                <h1>Gift Cards</h1>
+                <p style="color: #6b7280; margin-bottom: 2rem;">Perfect for any book lover in your life!</p>
+                
+                <div class="info-section">
+                    <h2>Gift Card Options</h2>
+                    <div class="info-card">
+                        <h3>Digital Gift Card</h3>
+                        <p>Delivered instantly via email</p>
+                        <p class="price">$25 - $100</p>
+                    </div>
+                    <div class="info-card">
+                        <h3>Physical Gift Card</h3>
+                        <p>Mailed in a beautiful greeting card</p>
+                        <p class="price">$25 - $200</p>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <h2>How to Use</h2>
+                    <p>Simply enter your gift card code at checkout.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Silent Wisdom  </h3>
+                    <p style="font-size: 0.875rem; color: #6b7280;">Your trusted online bookstore for all genres. Fast shipping and excellent customer service.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="index.html">All Books</a></li>
+                        <li><a href="new-releases.html">New Releases</a></li>
+                        <li><a href="best-sellers.html">Best Sellers</a></li>
+                        <li><a href="gift-cards.html">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="book-clubs.html">Book Clubs</a></li>
+                        <li><a href="newsletter.html">Newsletter</a></li>
+                        <li><a href="facebook.html">Facebook</a></li>
+                        <li><a href="twitter.html">Twitter</a></li>
+                        <li><a href="instagram.html">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Silent Wisdom. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="cart-empty">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🛒</div>
+                <p style="margin-bottom: 0.5rem;">Your cart is empty</p>
+                <p style="font-size: 0.875rem;">Add some books to get started!</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
